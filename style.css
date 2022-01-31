@@ -1,0 +1,95 @@
+/* Variables */
+:root {
+	--color-blue: rgba(0, 142, 214, 0.8);
+}
+
+.navbar {
+	border-bottom: 3px solid var(--color-blue);
+}
+
+/* Hero */
+#hero {
+	position: relative;
+}
+
+#heroVideo,
+#heroImg {
+	width: 100vw;
+}
+
+#heroImg {
+	display: none;
+}
+
+.hero-text {
+	width: 100vw;
+	height: 97.5%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+}
+
+/* Card */
+.card-text {
+	min-height: 240px;
+}
+
+/* Services */
+.img-col {
+	margin: auto 0;
+}
+
+.services-img {
+	clip-path: ellipse(40% 45% at 50% 50%);
+}
+
+.service-list {
+	padding-inline-start: 0px;
+}
+
+.service-list li {
+	list-style: none;
+}
+
+.list-item {
+	margin-bottom: 25px;
+}
+
+.list-item img {
+	margin-right: 20px;
+}
+
+.list-img {
+	margin: auto 0;
+	height: 25px;
+	width: 25px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 960px) {
+	.card {
+		margin-bottom: 50px;
+	}
+
+	.card-text {
+		min-height: 100px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#heroVideo {
+		display: none;
+	}
+
+	#heroImg {
+		display: unset;
+	}
+
+	.hero-text {
+		height: 100%;
+	}
+}

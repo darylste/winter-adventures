@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Winter Adventures</title>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-around"
+		>
+			<div class="box">
+				<a href="#" class="navbar-brand">Winter Adventures</a>
+			</div>
+			<div class="box">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse text-white" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="./index.html#home"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								aria-current="page"
+								href="./index.html#accomodation"
+								>Accomodation</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								aria-current="page"
+								href="./index.html#services"
+								>Services</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="./events.html"
+								>Events</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								aria-current="page"
+								href="./index.html#contact"
+								>Contact</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Carousel -->
+		<section class="container pt-5 mt-3">
+			<h1>The Kalinda</h1>
+			<div
+				id="carouselExampleIndicators"
+				class="carousel slide"
+				data-bs-ride="carousel"
+			>
+				<div class="carousel-indicators">
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="0"
+						class="active"
+						aria-current="true"
+						aria-label="Slide 1"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="1"
+						aria-label="Slide 2"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="2"
+						aria-label="Slide 3"
+					></button>
+				</div>
+				<div class="carousel-inner container">
+					<div class="carousel-item active" data-bs-interval="5000">
+						<img
+							src="./assets/chalet1/bedroom.jpg"
+							class="d-block w-100"
+							alt="bedroom"
+						/>
+					</div>
+					<div class="carousel-item" data-bs-interval="5000">
+						<img
+							src="./assets/chalet1/jacuzzi.jpg"
+							class="d-block w-100"
+							alt="jacuzzi"
+						/>
+					</div>
+
+					<div class="carousel-item" data-bs-interval="5000">
+						<img
+							src="./assets/chalet1/snow.jpg"
+							class="d-block w-100"
+							alt="snow"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Info Section -->
+		<section id="info" class="bg-light">
+			<div class="bg-light">
+				<div class="container mt-5 py-5 w-100">
+					<div class="row">
+						<div class="col-sm">
+							<h4>Tignes</h4>
+							<p>
+								Off-beat, up-beat, cosmopolitan, sporty and innovative, Tignes
+								gives you the unique opportunity to experience the mountains in
+								a different way. Whether you are a big fan of skiing, you prefer
+								holidays with your family, you are fond of authenticity, or you
+								are a party animal, Tignes shows you all it's got to help you
+								choose the area of the french ski resort where you belong!
+							</p>
+							<ul class="service-list">
+								<li class="d-flex list-item">
+									<img src="./assets/check.svg" alt="" class="list-img" />
+									Maximum altitude: 3456m (top of the Grande Motte cable car)
+								</li>
+
+								<li class="d-flex list-item">
+									<img src="./assets/check.svg" alt="" class="list-img" />
+									300kms of ski runs suitable for all levels, from beginner to
+									expert (greens, blues, reds, blacks and “Naturide” trails that
+									have been made safe but not groomed) with 78 ski lifts
+									available.
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm img-col">
+							<img
+								src="./assets/chalet1/tignes.jpeg"
+								alt="ski shop"
+								class="img-fluid services-img"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="footer-dark bg-dark">
+			<div class="d-flex justify-content-center text-white">
+				<p class="mt-3">Winter Adventures 2022</p>
+			</div>
+		</footer>
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
