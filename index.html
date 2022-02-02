@@ -62,13 +62,13 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="./events.html"
-								>Events</a
+							<a class="nav-link" aria-current="page" href="/index.html#contact"
+								>Contact</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="/index.html#contact"
-								>Contact</a
+							<a class="nav-link" aria-current="page" href="./events.html"
+								>Events</a
 							>
 						</li>
 					</ul>
@@ -103,7 +103,9 @@
 								Spa's, gyms, restaurants and a ski shop are right on your
 								doorstep.
 							</p>
-							<a href="./tignes.html" class="btn btn-primary">Go somewhere</a>
+							<a href="./tignes.html" class="btn btn-primary"
+								>More details...</a
+							>
 						</div>
 					</div>
 				</div>
@@ -194,32 +196,36 @@
 		<!-- Contact Section -->
 		<section id="contact" class="container py-5">
 			<h4>Contact</h4>
-			<form>
+			<form id="form">
 				<input
 					type="text"
 					class="form-control my-3"
 					id="nameInput"
 					placeholder="Name..."
+					required
 				/>
 				<input
 					type="email"
 					class="form-control my-3"
 					id="emailInput"
 					placeholder="Email Address..."
+					required
 				/>
 				<input
 					type="text"
 					class="form-control my-3"
 					id="addressInput"
 					placeholder="Address..."
+					required
 				/>
 				<input
 					type="text"
 					class="form-control my-3"
 					id="postcodeInput"
 					placeholder="Postcode"
+					required
 				/>
-				<select class="form-select">
+				<select class="form-select" required>
 					<option selected disabled>Please choose an area...</option>
 					<option value="1">Glasgow</option>
 					<option value="2">Edinburgh</option>
@@ -230,9 +236,12 @@
 					class="form-control my-3"
 					placeholder="Message..."
 					id="messageInput"
+					required
 				></textarea>
 				<div class="d-grid">
-					<button type="submit" class="btn btn-info">Submit</button>
+					<button type="submit" class="btn btn-info" id="form-submit">
+						Submit
+					</button>
 				</div>
 			</form>
 		</section>
@@ -249,6 +258,6 @@
 			crossorigin="anonymous"
 		></script>
 		<!-- Custom JS -->
-		<script src="./script.js"></script>
+		<script src="./script.js" defer></script>
 	</body>
 </html>

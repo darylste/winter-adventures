@@ -1,7 +1,8 @@
-const hero = document.getElementById('hero');
+const form = document.getElementById('form');
 
-// put if statment in a function
+// dynamically set hero img/video depending on screen size.
 const setHero = () => {
+	const hero = document.getElementById('hero');
 	const heroImg = document.getElementById('heroImg');
 	const heroVideo = document.getElementById('heroVideo');
 
@@ -12,22 +13,41 @@ const setHero = () => {
 		heroImg.id = 'heroImg';
 
 		hero.appendChild(heroImg);
-		console.log(window.innerWidth);
 	} else if (window.innerWidth > 900 && !heroVideo) {
 		const heroVideo = document.createElement('video');
 		heroVideo.src = './assets/video/Mt_Baker.mp4';
 		heroVideo.alt = 'Mountains';
 		heroVideo.id = 'heroVideo';
+
+		// NOT WORKING on load
+		// works on code save ???
 		heroVideo.setAttribute('autoplay', true);
 		heroVideo.setAttribute('loop', true);
+		heroVideo.setAttribute('muted', true);
 
 		hero.appendChild(heroVideo);
-		console.log(window.innerWidth);
 	}
 };
 
-// add event listener for screen size change?
+// prevent default on form.
+const processForm = (event) => {
+	const formInputs = document.querySelectorAll('.form-control');
+	const formSubmit = document.getElementById('form-submit');
+
+	event.preventDefault();
+	// clear form
+	formInputs.forEach((item) => {
+		item.value = '';
+	});
+	// change button
+
+	formSubmit.classList.replace('btn-info', 'btn-success');
+	formSubmit.innerHTML = 'Submitted';
+};
+
+// event listeners
 window.addEventListener('resize', setHero);
+form.addEventListener('submit', processForm);
 
 // onload
 setHero();

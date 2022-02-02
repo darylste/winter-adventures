@@ -24,7 +24,7 @@
 
 .card-text {
 	margin: 15px;
-	min-height: 220px;
+	min-height: 300px;
 }
 
 /* Typography */
@@ -63,13 +63,13 @@ h6 {
 
 /* Media Queries */
 
-@media only screen and (max-width: 1450px) {
+@media only screen and (max-width: 1120px) {
 	.grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.card-container {
-		width: 60%;
+		width: 90%;
 		margin: 0 auto;
 		margin-bottom: 50px;
 	}
@@ -79,13 +79,21 @@ h6 {
 	}
 
 	.card-text {
-		min-height: unset;
+		min-height: 300px;
 	}
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+
 	.card-container {
 		width: 80%;
+	}
+
+	.card-text {
+		min-height: unset;
 	}
 }
 
