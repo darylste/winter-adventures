@@ -17,7 +17,7 @@
 			crossorigin="anonymous"
 		/>
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./styles/style.css" />
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -25,7 +25,9 @@
 			class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-around"
 		>
 			<div>
-				<a href="./index.html" class="navbar-brand">Winter Adventures</a>
+				<a href="./index.html" class="navbar-brand">
+					<canvas id="canvas"></canvas>
+				</a>
 			</div>
 			<div>
 				<button
@@ -50,28 +52,30 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a
-								class="nav-link"
-								aria-current="page"
-								href="./index.html#accomodation"
+							<a class="nav-link" aria-current="page" href="#accomodation"
 								>Accomodation</a
 							>
 						</li>
 						<li class="nav-item">
-							<a
-								class="nav-link"
-								aria-current="page"
-								href="./index.html#services"
+							<a class="nav-link" aria-current="page" href="#services"
 								>Services</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="/index.html#contact"
+							<a
+								class="nav-link"
+								aria-current="page"
+								href="./pages/packages.html"
+								>Packages</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#contact"
 								>Contact</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="./events.html"
+							<a class="nav-link" aria-current="page" href="./pages/events.html"
 								>Events</a
 							>
 						</li>
@@ -107,7 +111,7 @@
 								Spa's, gyms, restaurants and a ski shop are right on your
 								doorstep.
 							</p>
-							<a href="./tignes.html" class="btn btn-primary"
+							<a href="./pages/tignes.html" class="btn btn-primary"
 								>More details...</a
 							>
 						</div>
@@ -130,7 +134,7 @@
 								perfect spot for holidays all year round. A 10 minute walk from
 								the centre of the village.
 							</p>
-							<a href="./morzine.html" class="btn btn-primary"
+							<a href="./pages/morzine.html" class="btn btn-primary"
 								>More details...</a
 							>
 						</div>
@@ -153,10 +157,36 @@
 								all the old and new. 30 minutes from Lake Geneva - a perfect
 								spot for holidays all year round.
 							</p>
-							<a href="./tania.html" class="btn btn-primary">More details...</a>
+							<a href="./pages/tania.html" class="btn btn-primary"
+								>More details...</a
+							>
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+		<!-- Newsletter Banner -->
+		<section class="newsletter bg-dark py-5 text-white">
+			<h2 id="newsletterTitle" class="display-5">Sign up to our newsletter!</h2>
+			<form id="newsletterForm" class="newsletter-form">
+				<div class="form-group">
+					<label for="nameInput" class="me-3 py-3">First Name</label>
+					<input required class="form-control" type="text" id="nameInput" />
+				</div>
+				<div class="form-group">
+					<label for="emailInput" class="me-3 py-3">Email Address</label>
+					<input required class="form-control" type="email" id="emailInput" />
+				</div>
+				<button id="form-submit" class="btn btn-primary px-3 mt-4">
+					Submit
+				</button>
+			</form>
+			<div id="newsletterThankyou" class="hidden py-5">
+				<p>
+					Thanks for signing up for our newsletter! We send out regular updates
+					about the latest deals and competitions. Keep an eye on your mailbox
+					for a change to win!
+				</p>
 			</div>
 		</section>
 		<!-- Services Section -->
@@ -175,13 +205,13 @@
 						</p>
 						<ul class="service-list">
 							<li class="d-flex list-item">
-								<img src="./assets/check.svg" alt="" class="list-img" />
+								<img src="./assets/icons/check.svg" alt="" class="list-img" />
 								Our childcare teams deliver a unique service, ensuring that
 								every child gets the attention & support they need.
 							</li>
 
 							<li class="d-flex list-item">
-								<img src="./assets/check.svg" alt="" class="list-img" />
+								<img src="./assets/icons/check.svg" alt="" class="list-img" />
 								Our comprehensive range of ski programmes ensure that all our
 								clients enjoy their time in the mountains.
 							</li>
@@ -251,8 +281,9 @@
 		</section>
 		<!-- Footer -->
 		<footer class="footer-dark bg-dark">
-			<div class="d-flex justify-content-center text-white">
+			<div class="d-flex flex-column align-items-center text-white">
 				<p class="mt-3">Winter Adventures 2022</p>
+				<p id="date"></p>
 			</div>
 		</footer>
 		<!-- Bootstrap JS -->
@@ -262,6 +293,9 @@
 			crossorigin="anonymous"
 		></script>
 		<!-- Custom JS -->
-		<script src="./script.js" defer></script>
+		<script src="./scripts/script.js" defer></script>
+		<!-- newsletter JS -->
+		<script src="./scripts/newsletter.js"></script>
+		<script src="./scripts/basic.js"></script>
 	</body>
 </html>

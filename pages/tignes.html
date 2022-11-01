@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Winter Adventures</title>
+		<title>Winter Adventures - Tignes</title>
 		<!-- Bootstrap CSS -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -13,7 +13,7 @@
 			crossorigin="anonymous"
 		/>
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -21,7 +21,9 @@
 			class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-around"
 		>
 			<div class="box">
-				<a href="#" class="navbar-brand">Winter Adventures</a>
+				<a href="../index.html" class="navbar-brand">
+					<canvas id="canvas"></canvas>
+				</a>
 			</div>
 			<div class="box">
 				<button
@@ -38,7 +40,7 @@
 				<div class="collapse navbar-collapse text-white" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="./index.html#home"
+							<a class="nav-link" aria-current="page" href="../index.html#home"
 								>Home</a
 							>
 						</li>
@@ -46,7 +48,7 @@
 							<a
 								class="nav-link"
 								aria-current="page"
-								href="./index.html#accomodation"
+								href="../index.html#accomodation"
 								>Accomodation</a
 							>
 						</li>
@@ -54,7 +56,7 @@
 							<a
 								class="nav-link"
 								aria-current="page"
-								href="./index.html#services"
+								href="../index.html#services"
 								>Services</a
 							>
 						</li>
@@ -64,10 +66,15 @@
 							>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="./packages.html"
+								>Packages</a
+							>
+						</li>
+						<li class="nav-item">
 							<a
 								class="nav-link"
 								aria-current="page"
-								href="./index.html#contact"
+								href="../index.html#contact"
 								>Contact</a
 							>
 						</li>
@@ -75,9 +82,19 @@
 				</div>
 			</div>
 		</nav>
+		<!-- Welcome message -->
+		<section class="bg-light px-5 py-5">
+			<h1 id="welcomeMessage" class="display-3 pt-5">Welcome!</h1>
+			<p id="welcomeDeals">
+				We at Winter Adventures know how amazing a skiing holiday can be. That's
+				why we have added some great offers to make those holiday dreams come
+				true.
+			</p>
+			<p>Visit our packages page to book your dream holiday now!</p>
+		</section>
 		<!-- Carousel -->
 		<section class="container pt-5 mt-3">
-			<h1>The Kalinda</h1>
+			<h1 class="display-4 my-3">The Kalinda</h1>
 			<div
 				id="carouselExampleIndicators"
 				class="carousel slide"
@@ -108,14 +125,14 @@
 				<div class="carousel-inner container">
 					<div class="carousel-item active" data-bs-interval="5000">
 						<img
-							src="./assets/chalet1/bedroom.jpg"
+							src="../assets/chalet1/bedroom.jpg"
 							class="d-block w-100"
 							alt="bedroom"
 						/>
 					</div>
 					<div class="carousel-item" data-bs-interval="5000">
 						<img
-							src="./assets/chalet1/jacuzzi.jpg"
+							src="../assets/chalet1/jacuzzi.jpg"
 							class="d-block w-100"
 							alt="jacuzzi"
 						/>
@@ -123,7 +140,7 @@
 
 					<div class="carousel-item" data-bs-interval="5000">
 						<img
-							src="./assets/chalet1/snow.jpg"
+							src="../assets/chalet1/snow.jpg"
 							class="d-block w-100"
 							alt="snow"
 						/>
@@ -131,13 +148,22 @@
 				</div>
 			</div>
 		</section>
+		<!-- Weather Section -->
+		<section class="weather-section bg-dark text-white pt-5 py-5 px-5 mt-5">
+			<h4 class="display-6 mb-4">Weather Forecast</h4>
+			<div class="weather-container">
+				<img src="/" alt="weather icon" id="weather-icon" />
+				<p id="weather-desc"></p>
+				<p id="weather-temp"></p>
+			</div>
+		</section>
 		<!-- Info Section -->
 		<section id="info" class="bg-light">
 			<div class="bg-light">
-				<div class="container mt-5 py-5 w-100">
+				<div class="container py-5 w-100">
 					<div class="row">
 						<div class="col-sm">
-							<h4>Tignes</h4>
+							<h4 class="display-6 mb-3">Tignes</h4>
 							<p>
 								Off-beat, up-beat, cosmopolitan, sporty and innovative, Tignes
 								gives you the unique opportunity to experience the mountains in
@@ -148,12 +174,20 @@
 							</p>
 							<ul class="service-list">
 								<li class="d-flex list-item">
-									<img src="./assets/check.svg" alt="" class="list-img" />
+									<img
+										src="../assets/icons/check.svg"
+										alt=""
+										class="list-img"
+									/>
 									Maximum altitude: 3456m (top of the Grande Motte cable car)
 								</li>
 
 								<li class="d-flex list-item">
-									<img src="./assets/check.svg" alt="" class="list-img" />
+									<img
+										src="../assets/icons/check.svg"
+										alt=""
+										class="list-img"
+									/>
 									300kms of ski runs suitable for all levels, from beginner to
 									expert (greens, blues, reds, blacks and “Naturide” trails that
 									have been made safe but not groomed) with 78 ski lifts
@@ -163,7 +197,7 @@
 						</div>
 						<div class="col-sm img-col">
 							<img
-								src="./assets/chalet1/tignes.jpeg"
+								src="../assets/chalet1/tignes.jpeg"
 								alt="ski shop"
 								class="img-fluid services-img"
 							/>
@@ -172,10 +206,35 @@
 				</div>
 			</div>
 		</section>
+		<section class="map-section">
+			<div class="container mt-5 py-5 w-100">
+				<h4 class="display-6 mb-3">Our Locations</h4>
+				<div
+					id="mapContainer"
+					class="map bg-dark"
+					style="width: 100%; height: 600px"
+				></div>
+			</div>
+			<div class="map-key container mb-5">
+				<div class="key-item">
+					<div class="yellow-key me-3"></div>
+					<p>Morzine</p>
+				</div>
+				<div class="key-item">
+					<div class="green-key me-3"></div>
+					<p>Tania</p>
+				</div>
+				<div class="key-item">
+					<div class="blue-key me-3"></div>
+					<p>Tignes</p>
+				</div>
+			</div>
+		</section>
 		<!-- Footer -->
 		<footer class="footer-dark bg-dark">
-			<div class="d-flex justify-content-center text-white">
+			<div class="d-flex flex-column align-items-center text-white">
 				<p class="mt-3">Winter Adventures 2022</p>
+				<p id="date"></p>
 			</div>
 		</footer>
 		<!-- Bootstrap JS -->
@@ -184,5 +243,22 @@
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
+		<!-- Mapbox CDN -->
+		<script
+			src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+			type="text/javascript"
+			charset="utf-8"
+		></script>
+		<script
+			src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+			type="text/javascript"
+			charset="utf-8"
+		></script>
+		<!-- Custom Map Scripts -->
+		<script src="../scripts/map.js"></script>
+		<!-- Weather API -->
+		<script src="../scripts/weather.js"></script>
+		<!-- basic scripts -->
+		<script src="../scripts/basic.js"></script>
 	</body>
 </html>

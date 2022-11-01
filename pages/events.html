@@ -17,7 +17,7 @@
 			crossorigin="anonymous"
 		/>
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="./events.css" />
+		<link rel="stylesheet" href="../styles/events.css" />
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -25,7 +25,9 @@
 			class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-around"
 		>
 			<div class="box">
-				<a href="#" class="navbar-brand">Winter Adventures</a>
+				<a href="../index.html" class="navbar-brand">
+					<canvas id="canvas"></canvas>
+				</a>
 			</div>
 			<div class="box">
 				<button
@@ -42,7 +44,7 @@
 				<div class="collapse navbar-collapse text-white" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="./index.html#hero"
+							<a class="nav-link" aria-current="page" href="../index.html#hero"
 								>Home</a
 							>
 						</li>
@@ -50,7 +52,7 @@
 							<a
 								class="nav-link"
 								aria-current="page"
-								href="./index.html#accomodation"
+								href="../index.html#accomodation"
 								>Accomodation</a
 							>
 						</li>
@@ -58,12 +60,20 @@
 							<a
 								class="nav-link"
 								aria-current="page"
-								href="./index.html#services"
+								href="../index.html#services"
 								>Services</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="/index.html#contact"
+							<a class="nav-link" aria-current="page" href="./packages.html"
+								>Packages</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								aria-current="page"
+								href="../index.html#contact"
 								>Contact</a
 							>
 						</li>
@@ -79,7 +89,16 @@
 				</div>
 			</div>
 		</nav>
-
+		<!-- Welcome message -->
+		<section class="bg-light px-5 py-5">
+			<h1 id="welcomeMessage" class="display-3 pt-5">Welcome!</h1>
+			<p id="welcomeDeals">
+				We at Winter Adventures know how amazing a skiing holiday can be. That's
+				why we have added some great offers to make those holiday dreams come
+				true.
+			</p>
+			<p>Visit our packages page to book your dream holiday now!</p>
+		</section>
 		<!-- Video Section -->
 		<section class="video section">
 			<div class="grid">
@@ -154,8 +173,9 @@
 
 		<!-- Footer -->
 		<footer class="footer" style="color: #eee">
-			<div>
-				<p class="footer-text">Winter Adventures 2022</p>
+			<div class="d-flex flex-column align-items-center text-white">
+				<p class="mt-3">Winter Adventures 2022</p>
+				<p id="date"></p>
 			</div>
 		</footer>
 		<!-- Bootstrap JS -->
@@ -164,5 +184,6 @@
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
+		<script src="../scripts/basic.js"></script>
 	</body>
 </html>

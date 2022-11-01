@@ -2,7 +2,11 @@
 :root {
 	--color-blue: rgba(0, 142, 214, 0.8);
 }
-
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 .navbar {
 	border-bottom: 3px solid var(--color-blue);
 }
@@ -31,12 +35,45 @@
 	background-color: rgba(0, 0, 0, 0.3);
 	z-index: 1000;
 }
+/* weather section */
+.weather-section {
+	text-align: center;
+	width: 100%;
+}
+.weather-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.weather-container p {
+	margin: 0;
+}
+
+#weather-desc,
+#weather-temp {
+	font-size: 20px;
+	font-weight: bold;
+}
 
 /* Card */
 .card-text {
 	min-height: 240px;
 }
+/* newsletter */
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.newsletter-form,
+#newsletterThankyou {
+	width: 60%;
+}
 
+.skiing-equiptment {
+	flex: 1;
+}
 /* Services */
 .img-col {
 	margin: auto 0;
@@ -66,6 +103,37 @@
 	margin: auto 0;
 	height: 25px;
 	width: 25px;
+}
+
+/* map key */
+.map-key {
+	display: flex;
+	justify-content: space-between;
+}
+
+.green-key,
+.blue-key,
+.yellow-key {
+	width: 30px;
+	height: 30px;
+}
+.key-item {
+	display: flex;
+}
+.green-key {
+	background-color: #008000;
+}
+.blue-key {
+	background-color: #008ed6;
+}
+.yellow-key {
+	background-color: #ffff00;
+}
+
+/* utility class */
+.hidden {
+	display: none;
+	visibility: hidden;
 }
 
 /* Media Queries */
